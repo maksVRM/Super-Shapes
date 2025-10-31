@@ -48,4 +48,17 @@ anime({
     direction: 'alternate',
     easing: 'easeInOutSine',
     autoplay: true
-}) 
+})
+
+// we dublicate the same code (pretty much) for the wave 
+const wavePath = document.querySelector('#wave path')
+const waveOffset = anime.setDashoffset(wavePath)
+wavePath.setAttribute('stroke-dashoffset', waveOffset)
+anime({
+    targets: wavePath,
+    strokeDashoffset: [0, waveOffset],
+    duration: 2000,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+})

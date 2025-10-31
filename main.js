@@ -31,5 +31,21 @@ anime({
     loop: true,
     // remove the easing effect to keep it consistently smooth
     easing: 'linear',
-    autoplay: true
+    // autoplay: true
 })
+
+const zigZagPath = document.querySelector('#zigzag path')
+// setDashoffset figures ot how long our path is
+const zigZagOffset = anime.setDashoffset(zigZagPath)
+// we then set that back onto tha path element
+zigZagPath.setAttribute('stroke-dashoffset', zigZagOffset)
+
+anime({
+    targets: zigZagPath,
+    strokeDashoffset: [zigZagOffset, 0],
+    duration: 3000,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    autoplay: true
+}) 

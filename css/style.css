@@ -1,0 +1,24 @@
+#tunnel circle {
+    /* by default elements transform from their top left corner so here we are telling the cirlces to transform from the center  */
+    transform-origin: center;
+}
+
+.w-200 {
+    width: 200%;
+}
+
+.bg-yellow {
+    background-color: #fff44c;
+}
+
+.bg-purple {
+    background-color: #7a8cf9;
+}
+
+.bg-blue {
+    background-color: #7cebfc;
+}
+
+.bg-red {
+    background-color: #f9343d;
+}

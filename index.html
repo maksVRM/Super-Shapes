@@ -76,7 +76,13 @@
             <!-- title text -->
             <div class="w-100 h-25 bg-blue box"></div>
             <!-- rotating mini squares -->
-            <div class="w-100 h-25 bg-red box"></div>
+            <div class="w-100 h-25 bg-red box flex flex-wrap justify-around items-center pa3" id="dots">
+                <!-- each box takes up 10% width -->
+                <div class="w-10">
+                    <!-- the center class is part of tachyons -->
+                    <div class="dot center"></div>
+                </div>
+            </div>
             <!-- tunnel animation -->
             <div class="w-100 h-50 bg-yellow tunnel box" id="tunnel">
                 <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,8 +128,13 @@
                 <div class="w-50 h-50 bg-purple box"></div>
                 <div class="w-50 h-50 bg-yellow box"></div>
             </div>
-            <!-- flashing dots -->
-            <div class="w-50 h-25 bg-blue box"></div>
+            <!-- flashing circles -->
+            <div class="w-50 h-25 bg-blue box flex flex-wrap justify-around items-center pa3" id="circles">
+                <div class="w-20">
+                    <!-- the center class is part of tachyons -->
+                    <div class="dot br-100 center"></div>
+                </div>
+            </div>
             <!-- rotating square tunnel -->
             <div class="w-50 h-25 bg-purple box"></div>
         </div>

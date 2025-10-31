@@ -27,7 +27,9 @@
 .box {
     /* using the inset keyword we can out shadows inside of elements */
     box-shadow: inset 0 0 0 4px black;
+    transform: none !important;
 }
+
 
 .conveyor-belt {
     border-left: solid 4px black;
@@ -36,4 +38,10 @@
 
 .page {
     border: solid black 4px;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    background-color: black;
 }

@@ -84,3 +84,34 @@ anime({
 })
 
 
+// we dublicate the content 40 times using our fancy function 
+dublicateHTML(document.querySelector('#dots'), 40)
+const dots = document.querySelectorAll('#dots .dot')
+// here we animate each dot separately by loopin through
+// and running anime on each individual one
+dots.forEach(dot => {
+    anime({
+        targets: '.dot',
+        // give us a random rotation
+        rotate: (el, i) => anime.random(90, 360),
+        // random duration 
+        duration: (el, i) => anime.random(250, 750),
+        loop: true,
+        easing: 'easeInOutSine',
+        direction: 'alternate',
+        autoplay: true
+    })
+})
+
+// we want to create 20 dots 
+dublicateHTML(document.querySelector('#circles'), 20)
+anime({
+    targets: '#circles .dot',
+    // when we use array it runs through each property in order
+    scale: [0, 1.2],
+    delay: (el, i) => i * 100,
+    duration: 250,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+})

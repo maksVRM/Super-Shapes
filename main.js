@@ -115,3 +115,16 @@ anime({
     direction: 'alternate',
     easing: 'easeInOutSine'
 })
+
+// our flash animation
+anime({
+    targets: '#flashes .flash',
+    // we put the colors into an array and grab each one by its index
+    backgroundColor: (el, i) => ['#fff636', '#cb89fc', '#fc3035', '#77ebfd'][i],
+    // apply a random delay to each one
+    delay: (el, i) => anime.random(50, 100),
+    duration: 500,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+})

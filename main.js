@@ -1,3 +1,12 @@
+// we want to dublicate our crosses content 10 times 
+const dublicateHTML = (element, quantity) => {
+    const newContent = new Array(quantity).fill(element.innerHTML).join('')
+    element.innerHTML = newContent
+}
+
+const crosses = document.querySelector('#crosses')
+dublicateHTML(crosses, 10)
+
 anime({
     // just a regular css selector
     targets: '#tunnel circle',

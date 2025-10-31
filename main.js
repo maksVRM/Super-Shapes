@@ -128,3 +128,20 @@ anime({
     direction: 'alternate',
     easing: 'easeInOutSine'
 })
+
+// animation fo our squares
+anime({
+    targets: '#squares rect',
+    // we need to force the translate position to center the squares
+    translateX: ['-50%', '-50%'],
+    // we’re not actually animating them, it’s a bit of a hack
+    translateY: ['-50%', '-50%'],
+    // animate rotation from 45 to 0 to -45
+    rotate: [45, 0, -45],
+    // delay each one incrementally by 100ms
+    delay: (el, i) => 100 * i,
+    duration: (el, i) => 750,
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate'
+})

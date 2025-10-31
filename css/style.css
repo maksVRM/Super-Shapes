@@ -1,5 +1,6 @@
 #tunnel circle,
-#crosses path {
+#crosses path,
+.squares rect {
     /* by default elements transform from their top left corner so here we are telling the cirlces to transform from the center  */
     transform-origin: center;
 }
@@ -40,8 +41,14 @@
     border: solid black 4px;
 }
 
-.dot{
+.dot {
     width: 12px;
     height: 12px;
     background-color: black;
+}
+
+.squares rect {
+    /* this will offset our boxes so they appear exactly in the middle */
+    transform: translate(-50%, -50%);
+    transform-box: fill-box
 }

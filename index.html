@@ -18,20 +18,21 @@
         <!-- using the w-third class tells each box to take up third of the width -->
         <div class="w-third flex-wrap">
             <!-- these are styles for our individual boxes  -->
-            <div class="w-100 h-50 bg-yellow conveyor-belt overflow-hidden">
+            <div class="w-100 h-50 bg-yellow conveyor-belt overflow-hidden box">
                 <!-- our inner element is 2x the width and scrolls from right to left like a film strip -->
                 <div class="w-200 h-100 conveyor flex items-stretch">
-                    <div class="w-25 h-100 bg-red"></div>
-                    <div class="w-25 h-100 bg-purple"></div>
-                    <div class="w-25 h-100 bg-yellow"></div>
-                    <div class="w-25 h-100 bg-blue"></div>
-                    <div class="w-25 h-100 bg-red"></div>
-                    <div class="w-25 h-100 bg-purple"></div>
-                    <div class="w-25 h-100 bg-yellow"></div>
-                    <div class="w-25 h-100 bg-blue"></div>
+                    <div class="w-25 h-100 bg-red box"></div>
+                    <div class="w-25 h-100 bg-purple box"></div>
+                    <div class="w-25 h-100 bg-yellow box"></div>
+                    <div class="w-25 h-100 bg-blue box"></div>
+                    <div class="w-25 h-100 bg-red box"></div>
+                    <div class="w-25 h-100 bg-purple box"></div>
+                    <div class="w-25 h-100 bg-yellow box"></div>
+                    <div class="w-25 h-100 bg-blue box"></div>
                 </div>
             </div>
-            <div class="w-100 h-25 bg-blue" id="wave">
+            <!-- wave animation -->
+            <div class="w-100 h-25 bg-blue box" id="wave">
                 <svg width="100%" height="100%" viewBox="0 0 854 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 6.66652C22.452 6.66652 22.452 41.5225 44.9053 41.5225C67.3587 
                         41.5225 67.3587 6.66652 89.812 6.66652C112.267 6.66652 112.267 41.5225
@@ -50,14 +51,28 @@
                 </svg>
 
             </div>
-            <div class="w-100 h-25 bg-red"></div>
+            <!-- rotating crosses animation -->
+            <div class="w-100 h-25 bg-red flex flex-wrap box">
+                <div class="w-20 h-50 flex items-center justify-center">
+                    <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29 57.6253V-1.71737e-06" stroke="black" stroke-width="13.3333" stroke-miterlimit="10"
+                            stroke-linejoin="round" />
+                        <path d="M57.6253 29H0" stroke="black" stroke-width="13.3333" stroke-miterlimit="10"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+            </div>
         </div>
 
         <!-- second column -->
         <div class="w-third flex flex-wrap">
-            <div class="w-100 h-25 bg-blue"></div>
-            <div class="w-100 h-25 bg-red"></div>
-            <div class="w-100 h-50 bg-yellow" id="tunnel">
+            <!-- title text -->
+            <div class="w-100 h-25 bg-blue box"></div>
+            <!-- rotating mini squares -->
+            <div class="w-100 h-25 bg-red box"></div>
+            <!-- tunnel animation -->
+            <div class="w-100 h-50 bg-yellow tunnel box" id="tunnel">
                 <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- when we add stroke/width/fill styles to the gropu they all get shared between the children shapes/circles/rectanges -->
                     <g id="Page-1" stroke="#000" stroke-width="10" fill="none" fill-rule="evenodd">
@@ -81,7 +96,7 @@
         <!-- third column -->
         <div class="w-third flex flex-wrap">
             <!-- this is for our zigzag -->
-            <div class="w-100 h-50 bg-purple pa3" id="zigzag">
+            <div class="w-100 h-50 bg-purple pa3 box" id="zigzag">
                 <svg width="100%" height="100%" viewBox="0 0 663 659" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M662.395 6.66158L0.257812 32.4803L662.395 58.2963L0.257812 
                         84.1149L662.395 109.938L0.257812 135.756L662.395 161.575L0.257812 187.392L267.675 
@@ -94,14 +109,17 @@
 
             </div>
             <!-- here we add a flex and flex-wrap for our sub-sub boxes -->
-            <div class="w-100 h-25 bg-yellow flex flex-wrap">
-                <div class="w-50 h-50 bg-blue"></div>
-                <div class="w-50 h-50 bg-red"></div>
-                <div class="w-50 h-50 bg-purple"></div>
-                <div class="w-50 h-50 bg-yellow"></div>
+            <!-- flashing resctangles -->
+            <div class="w-100 h-25 flex flex-wrap">
+                <div class="w-50 h-50 bg-blue box"></div>
+                <div class="w-50 h-50 bg-red box"></div>
+                <div class="w-50 h-50 bg-purple box"></div>
+                <div class="w-50 h-50 bg-yellow box"></div>
             </div>
-            <div class="w-50 h-25 bg-blue"></div>
-            <div class="w-50 h-25 bg-purple"></div>
+            <!-- flashing dots -->
+            <div class="w-50 h-25 bg-blue box"></div>
+            <!-- rotating square tunnel -->
+            <div class="w-50 h-25 bg-purple box"></div>
         </div>
     </div>
     <script src="anime.min.js"></script>

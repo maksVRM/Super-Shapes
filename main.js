@@ -4,8 +4,19 @@ const dublicateHTML = (element, quantity) => {
     element.innerHTML = newContent
 }
 
+// here we grab our scrosses element
 const crosses = document.querySelector('#crosses')
+// we dublicate the content 10 times using our fancy function 
 dublicateHTML(crosses, 10)
+anime({
+    targets: '#crosses path',
+    rotate: '1turn',
+    delay: (el, i, l) => i * 100,
+    duration: 1200,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+})
 
 anime({
     // just a regular css selector

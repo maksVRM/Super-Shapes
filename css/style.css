@@ -1,4 +1,5 @@
-#tunnel circle {
+#tunnel circle,
+#crosses path {
     /* by default elements transform from their top left corner so here we are telling the cirlces to transform from the center  */
     transform-origin: center;
 }
@@ -12,7 +13,7 @@
 }
 
 .bg-purple {
-    background-color: #7a8cf9;
+    background-color: #cb89fc;
 }
 
 .bg-blue {

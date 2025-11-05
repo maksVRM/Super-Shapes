@@ -13,10 +13,11 @@
     <!-- adding the tachyons flex class enables flexbox -->
     <!-- min-vh-100 add a min-height of 100vh  -->
     <!-- items-stertch tells the child elements to take stertch all the full height -->
-    <div class="page min-vh-100 flex items-stretch">
+     <!--  by default de use flex-column on mobile and then flex-row above mobile -->
+    <div class="page min-vh-100 flex items-stretch flex-column flex-row-ns">
         <!-- each of these divs are one of three large columns -->
         <!-- using the w-third class tells each box to take up third of the width -->
-        <div class="w-third flex-wrap">
+        <div class="w-100 vh-100 flex-wrap">
             <!-- these are styles for our individual boxes  -->
             <div class="w-100 h-50 bg-yellow conveyor-belt overflow-hidden box">
                 <!-- our inner element is 2x the width and scrolls from right to left like a film strip -->
@@ -72,7 +73,7 @@
         </div>
 
         <!-- second column -->
-        <div class="w-third flex flex-wrap">
+        <div class="w-100 flex vh-100 flex-wrap">
             <!-- title text -->
             <div class="w-100 h-25 bg-blue box flex justify-center items-center pa3">
                 <svg width="100%" height="100%" viewBox="0 0 640 55" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +119,7 @@
         </div>
 
         <!-- third column -->
-        <div class="w-third flex flex-wrap">
+        <div class="w-100 vh-100 flex flex-wrap">
             <!-- this is for our zigzag -->
             <div class="w-100 h-50 bg-purple pa3 box" id="zigzag">
                 <svg width="100%" height="100%" viewBox="0 0 663 659" fill="none" xmlns="http://www.w3.org/2000/svg">
